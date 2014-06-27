@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/estilos.css"/>
+		<title>Pagina Web Mundial Brasil 2014</title>
+	</head>
+	<body>
+		<br><br>
+		<table border="0" align="center" class="menu">
+			<tr>
+				<th><a href="lista_equipos.html">Lista de Equipos</a></th>
+				<th><a href="calendario_resultados.html">Calendario y Resultados</a></th>
+				<th><a href="tabla_grupos.html">Tabla de Grupos</a></th>
+			</tr>
+			<tr>
+				<th><a href="goleo_individual.html">Goleo Individual</a></th>
+				<th><a href="goleo_equipo.html">Goleo por Equipos</a></th>
+				<th><a href="estadisticas.html">Estad&iacute;sticas</a></th>
+			</tr>
+			<tr>
+				<th><a href="noticias.html">Noticias</a></th>
+				<th><a href="captura_resultados.html">Capturar Resultados</a></th>
+				<th><a href="index.html">Inicio</a></th>
+			</tr>
+			<tr>
+				<th><a href="captura_equipo.html">Capturar Equipo</a></th>
+				<th><a href="captura_jugador.html">Capturar Jugador</a></th>
+				<th><a href="index.html">Inicio</a></th>
+			</tr>
+		</table>
+		<br>
+		<h1>Capturar Equipo</h1>
+		<br>
+		<form method="post" action="" align="center">
+			<label for="id_pais">Pais</label>
+			<input type="text" id="id_pais" name="id_pais" required>
+			<br>
+			<label for="id_nombre">Nombre</label>
+			<input type="text" id="id_nombre" name="id_nombre" required>
+			<br>
+			<label for="id_escudo">Escudo</label>
+			<input type="file" id="id_escudo" name="id_escudo" required>
+			<br>
+			<label for="id_continente">Continente</label>
+			<select id="id_continente" required>
+				<option value=""></option>
+				<option value="ame">America</option>
+				<option value="oce">Oceania</option>
+				<option value="eur">Europa</option>
+				<option value="afr">Africa</option>
+				<option value="asi">Asia</option>
+			</select>
+			<br>
+			<label for="id_uniforme">Uniforme</label>
+			<input type="file" id="id_uniforme" name="id_uniforme" required>
+			<br>
+			<input align="rigth" type="submit" value="Guardar">		
+		</form>
+	</body>
+</html>

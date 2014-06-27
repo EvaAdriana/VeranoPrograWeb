@@ -1,0 +1,86 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/estilos.css"/>
+		<title>Pagina Web Mundial Brasil 2014</title>
+	</head>
+	<body>
+		<br><br>
+		<table border="0" align="center" class="menu">
+			<tr>
+				<th><a href="lista_equipos.html">Lista de Equipos</a></th>
+				<th><a href="calendario_resultados.html">Calendario y Resultados</a></th>
+				<th><a href="tabla_grupos.html">Tabla de Grupos</a></th>
+			</tr>
+			<tr>
+				<th><a href="goleo_individual.html">Goleo Individual</a></th>
+				<th><a href="goleo_equipo.html">Goleo por Equipos</a></th>
+				<th><a href="estadisticas.html">Estad&iacute;sticas</a></th>
+			</tr>
+			<tr>
+				<th><a href="noticias.html">Noticias</a></th>
+				<th><a href="captura_resultados.html">Capturar Resultados</a></th>
+				<th><a href="index.html">Inicio</a></th>
+			</tr>
+			<tr>
+				<th><a href="captura_equipo.html">Capturar Equipo</a></th>
+				<th><a href="captura_jugador.html">Capturar Jugador</a></th>
+				<th><a href="index.html">Inicio</a></th>
+			</tr>
+		</table>
+		<form name="resultadosForm" method="post" action="guardar.php">
+			<table border="3" align="center" width="40%">
+				<caption><h1>Captura de Resultados</h1></caption>
+				<tr align="center">
+					<th>Fecha</th>
+					<th>Equipo Local</th>
+					<th>Marcador</th>
+					<th>Equipo Visitante</th>
+				</tr>
+				<tr>
+					<td align="center">23/Junio/2014</td>
+					<td align="center">&nbsp;&nbsp;<img align="center" src="images/brasil.png"/>&nbsp;&nbsp;Brasil</td>
+					<td align="center">
+						<input type="text" name="equipo1_local" value="" style="width:30px;">&nbsp;&nbsp;-&nbsp;&nbsp;
+						<input type="text" name="equipo2_visitante" value="" style="width:30px;">
+					</td>
+					<td align="center">M&eacute;xico&nbsp;&nbsp;<img align="center" src="images/mex.png"/></td>
+				</tr>
+				<tr>
+					<td align="center">23/Junio/2014</td>
+					<td align="center">&nbsp;&nbsp;<img align="center" src="images/alemania.png"/>&nbsp;&nbsp;Alemania</td>
+					<td align="center">
+						<input type="text" name="equipo3_local" value="" style="width:30px;">&nbsp;&nbsp;-&nbsp;&nbsp;
+						<input type="text" name="equipo4_visitante" value="" style="width:30px;">
+					</td>
+					<td align="center">Portugal&nbsp;&nbsp;<img align="center" src="images/portugal.png"/></td>
+				</tr>
+				<tr>
+					<td align="center">23/Junio/2014</td>
+					<td align="center">
+						<select name="equipo_local">
+							<option value=""></option>
+							<option value="mx">M&eacute;xico</option>
+							<option value="br">Brasil</option>
+						</select>
+					</td>
+					<td align="center">
+						<input type="text" name="equipo5_local" value="" style="width:30px;">&nbsp;&nbsp;-&nbsp;&nbsp;
+						<input type="text" name="equipo6_visitante" value="" style="width:30px;">
+					</td>
+					<td align="center">
+						<select name="equipo_visitante">
+							<option value=""></option>
+							<option value="mx">M&eacute;xico</option>
+							<option value="br">Brasil</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4" align="right">
+						<input type="submit" name="Guardar" value="Guardar">
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
