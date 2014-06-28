@@ -1,110 +1,37 @@
-body {
-	background-image: url("../images/fondo.jpg");
-	background-repeat:no-repeat;
-	background-size:100% auto;
-}
-table th {
-	background-color:#409C40;
-	color:#000000;
-	font-family:Comic Sans MS;
-	font-size:14pt;
-	text-align:center;
-}
-caption {
-	color:#020068;
-	font-family:Comic Sans MS;
-	font-size:14pt;
-	text-align:center;
-}
-h1 {
-	color:#020068;
-	font-family:Comic Sans MS;
-	font-size:28pt;
-	text-align:center;
-}
-h2 {
-	color:#000000;
-	font-family:Comic Sans MS;
-	text-align:center;
-}
-p {
-	color:#000000;
-	font-family:Comic Sans MS;
-	font-size:12pt;
-	text-align:left;
-}
-.renglon_verde_alto {
-	background-color:#9BA600;
-	color:#333333;
-	font-family:Comic Sans MS;
-	font-size:12pt;
-	text-align:center;
-}
-.renglon_verde_bajo {
-	background-color:#44A013;
-	color:#FFFFFF;
-	font-family:Comic Sans MS;
-	font-size:12pt;
-	text-align:center;
-}
-.menu {
-	border:1px solid #000000;
-	background-color:#409C40;
-}
-.menu th {
-	border:1px solid #000000;
-	background-color:#409C40;
-	padding:0;
-}
-.menu th a:link, a:visited{
-	color:#000000;
-	font-family:Comic Sans MS;
-	font-size:16pt;
-	text-align:center;
-	text-decoration:none;
-}
-.menu th a:hover {
-	text-decoration:underline;
-	background-color:#5CB47B;
-	display:block;
-}
-.calendario {
-	border:1px solid #000000;
-	background-color:#409C40;
-}
-.calendario th {
-	border:1px solid #000000;
-	background-color:#409C40;
-	padding:0;
-}
-.calendario td{
-	border:0px solid #000000;
-	background-color:#409C40;
-	padding:0;
-}
-.renglon_over {
-	background-color:#2F36FF;
-	color:#000000;
-	font-family:Comic Sans MS;
-	font-size:12pt;
-	text-align:center;
-}
-.fecha {
-	background-color:#3BFF53;
-	color:#000000;
-	font-family:Comic Sans MS;
-	font-size:12pt;
-	text-align:right;
-}
-.fecha td {
-	background-color:#EF8017;
-}
-.evento  {
-	background-color:#3BFF53;
+.id_texto_rojo{
 	font-family:Comic Sans MS;
 	font-size:10pt;
-	text-align:center;
+	color:#FE0000
 }
-.evento td {
-	background-color:#FCE829;
+
+.titulo3{
+	font-family:Arial;
+	font-size:12pt;
+	color:#309900
+}
+h2 {
+	color:#408D01;
+	font-family:Comic Sans MS;
+	font-size:20pt;
+}
+.id_texto_normal{
+	font-family:Arial;
+	font-size:10pt;
+	color:#000000;
+}
+
+.titulo{
+	font-family:Arial;
+	font-size:12pt;
+	color:#000000
+}
+
+.titulo2{
+	font-family:Arial;
+	font-size:12pt;
+	color:#000000
+}
+
+form{
+	background-color: #CEFECA;
 }
