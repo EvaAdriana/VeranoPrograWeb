@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/estilos.css"/>
+		<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+   		<title>Registro Pa&iacute;s</title>
+   		 <!-- Bootstrap -->
+   		 <link href="css/bootstrap.min.css" rel="stylesheet">
+
+   		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+   		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+   		<!--[if lt IE 9]>
+    	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    	<![endif]-->
+	</head>
+  <body>
+      <div class="container">
+        <div class="row">
+          <h1><span class="label label-success" align="left">Registro de Pa&iacute;s</span></h1>
+        </div><br><br>
+        <form role="form">
+          <div class="row"><!--Inicio renglon Nombre del Pais--> 
+            <div class="col-md-4">
+                
+                  <label for="nombre">Ingrese el nombre del Pa&iacute;s:&nbsp;</label>
+                      <input type="text" class="form-control" id="nombre" name="nombre" required>
+                  <label for="bandera">Seleccione la Bandera:&nbsp;</label> 
+                      <input type="file" class="form-control" id="bandera" name="bandera" required>
+                  <label for="idcontinente">Seleccione el Continente:&nbsp;</label>
+                     <select id="idcontinente" required>
+                        <option value=""></option>
+                        <option value="ame">America</option>
+                        <option value="oce">Oceania</option>
+                        <option value="eur">Europa</option>
+                        <option value="afr">Africa</option>
+                        <option value="asi">Asia</option>
+                     </select>
+          </div> <!--fin renglon-->      
+        </form> 
+      </div>
+  </body>
+</html>
