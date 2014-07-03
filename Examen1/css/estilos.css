@@ -1,6 +1,6 @@
 .id_texto_rojo{
-	font-family:Comic Sans MS;
-	font-size:10pt;
+	font-family:Arial;
+	font-size:12pt;
 	color:#FE0000
 }
 
@@ -11,7 +11,7 @@
 }
 h2 {
 	color:#408D01;
-	font-family:Comic Sans MS;
+	font-family:Arial;
 	font-size:20pt;
 }
 .id_texto_normal{
