@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/estilos.css"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <script>$(document).ready(
+            function(){
+                $('#formulario').hide('fast');
+                $('#verfom').click(
+                    function(){
+                      $('#formulario').show(2000);
+                      $('#jugador').hide('fast');
+                      $('#entrenador').hide('fast');
+                    }
+                  );
+                $('#b_entrenador').click(
+                    function(){
+                      $('#jugador').hide('fast');
+                      $('#entrenador').show(2000);
+                    }
+                  );
+                $('#b_jugador').click(
+                    function(){
+                      $('#entrenador').hide('fast');
+                      $('#jugador').show(2000);
+                    }
+                  );
+            });</script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+      <div class="jumbotron">
+          <h1><label id="titulo" class="label label-primary">Examen 2.  5 de Julio 2014</label></h1><br>
+         <p><a class="btn btn-primary btn-lg" role="button" id="verfom">Ver Formulario</a></p>
+      </div>
+    <div id="formulario">
+     <div class="row" id="renglon"><!--Inicio renglon--> 
+            <div class="col-md-4">
+                <h3><label class="label label-primary">Equipo</label></h3>
+                <form method="post" action="">
+                    <label for="id_pais">Pais</label>
+                    <input type="text" class="form-control" id="id_pais" name="id_pais" required>
+                    <label for="id_nombre">Nombre</label>
+                    <input type="text" class="form-control" id="id_nombre" name="id_nombre" required>
+                    <label for="id_escudo">Escudo</label>
+                    <input type="file" class="form-control" id="id_escudo" name="id_escudo" required>
+                    <label for="id_continente">Continente</label>
+                    <select class="form-control" id="id_continente" required>
+                      <option value=""></option>
+                      <option value="ame">America</option>
+                      <option value="oce">Oceania</option>
+                      <option value="eur">Europa</option>
+                      <option value="afr">Africa</option>
+                      <option value="asi">Asia</option>
+                    </select>
+                    <label for="id_uniforme">Uniforme</label>
+                    <input type="file" id="id_uniforme" name="id_uniforme" required><br>
+                    <input align="rigth" class="form-control" type="submit" value="Guardar">   
+                </form>
+            </div>
+            <div class="col-md-4">
+                    <h3><label class="label label-primary">Integrante</label></h3>
+                    <button type="submit" class="form-control" id="b_entrenador">Entrenador</button><br><br>
+                    <button type="submit" class="form-control" id="b_jugador">Jugador</button>   
+            </div>
+            <div class="col-md-4">
+                <h3><label class="label label-primary">Tipo de integrante</label></h3>
+                    <div id="jugador">  
+                      <form>
+                          <label for="numero">Numero</label>
+                          <input type="text" id="numero" class="form-control" name="numero" required>
+                          <label for="id_integrante">ID. Integrante</label>
+                          <select id="id_integrante" class="form-control" required>
+                            <option value=""></option>
+                            <option value="ame">Juan</option>
+                            <option value="oce">Paco</option>
+                            <option value="eur">Pepe</option>
+                            <option value="afr">Oscar</option>
+                            <option value="asi">Sebastian</option>
+                          </select>
+                          <label for="id_integrante">ID. Posicion</label>
+                          <select id="id_integrante" class="form-control" required>
+                            <option value=""></option>
+                            <option value="ame">Delantero</option>
+                            <option value="oce">Defensa</option>
+                            <option value="eur">Portero</option>
+                            <option value="afr">Medio</option>
+                            <option value="asi">Banca</option>
+                          </select><br>
+                          <input align="rigth" type="submit" class="form-control" value="Guardar">   
+                      </form>
+                   </div>
+                   <div id="entrenador">  
+                      <form>
+                          <label for="id_entrenador">ID. Entrenador</label>
+                          <select id="id_entrenador" class="form-control" required>
+                            <option value=""></option>
+                            <option value="ame">Juan</option>
+                            <option value="oce">Paco</option>
+                            <option value="eur">Pepe</option>
+                            <option value="afr">Oscar</option>
+                            <option value="asi">Sebastian</option>
+                          </select>
+                          <label for="id_integrante">ID. Equipo</label>
+                          <select id="id_integrante" class="form-control" required>
+                            <option value=""></option>
+                            <option value="ame">Brasil</option>
+                            <option value="oce">Mexico</option>
+                            <option value="eur">Chile</option>
+                            <option value="afr">Colombia</option>
+                            <option value="asi">Estados Unidos</option>
+                          </select><br>
+                          <input align="rigth" type="submit" class="form-control" value="Guardar">   
+                      </form>
+                   </div>
+            </div>
+                
+     </div> <!--fin renglon-->      
+    </div> 
+  </body>
+</html>
