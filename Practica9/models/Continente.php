@@ -1,6 +1,6 @@
 <?php
 
-class Usuario extends Modelo{
+class Continente extends Modelo{
     public $nombre_tabla = 'continente';
     public $pk = 'idcontinente';
     

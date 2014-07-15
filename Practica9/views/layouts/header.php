@@ -11,6 +11,22 @@
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
     <script type="text/javascript" src="../js/jquery.min.js"></script>
+    </script>
+    <script>$(document).ready(
+            function(){
+                $('#radioEntrenador').click(
+                    function(){
+                      $('#formJugador').hide('fast');
+                      $('#formEntrenador').show(2000);
+                    }
+                  );
+                $('#radioJugador').click(
+                    function(){
+                      $('#formEntrenador').hide('fast');
+                      $('#formJugador').show(2000);
+                    }
+                  );
+            });</script>
     <script type="text/javascript" src="../js/jquery.fancybox.pack.js"></script>
     <link href="../css/jquery.fancybox.css" rel="stylesheet" type="text/css" media="screen" />    
     <!-- Bootstrap core CSS -->

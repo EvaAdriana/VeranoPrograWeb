@@ -4,7 +4,7 @@
       include ('../../libs/adodb5/adodb.inc.php');
       include ('../../models/Conexion.php');
       include ('../../models/Modelo.php');
-      include ('../../models/Equipo.php');
+      include ('../../models/Estadio.php');
       include ('../../controllers/EstadioController.php');
       include ('../../libs/Er.php');
   include ('../layouts/header.php');
@@ -15,10 +15,11 @@
     }
 ?>
 	<br /><br />
-    <h2>Registro Estadio</h2><hr>
 	<div class="container">
     	<div class="row">
-            <div class="col-md-6">
+             <div class="col-md-4"></div>
+             <div class="col-md-4" align="center">
+                <h2>Registro Estadio</h2>
                 <form role="form" id="formEstadio">
                   <div class="form-group">
                     <label for="Nombre">Nombre</label>
