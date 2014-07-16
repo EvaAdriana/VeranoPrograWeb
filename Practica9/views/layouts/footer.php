@@ -5,7 +5,7 @@
 	 		<hr>
 	 		<p class="text-center">
 	 			
-	 			Clase programación web. <br><span class="glyphicon glyphicon-registration-mark"> </span> <?php echo date('Y'); ?>
+	 			Programación web. <br> Instituto Tecnologico de Celaya. <br><?php echo date('Y'); ?>
 	 			
 	 		</p>
 	 	</div>	
