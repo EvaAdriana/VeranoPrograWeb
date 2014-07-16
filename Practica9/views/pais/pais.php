@@ -7,13 +7,19 @@
       include ('../../controllers/PaisController.php');
       include ('../../libs/Er.php');
        include ('../layouts/header.php');
+   if (isset($_POST['nombre'])){
+    
+    $paisC=new PaisController();
+    $paisC->insertaPais($_POST);
+
+  }
 ?>
 	<br /><br />
 	<div class="container">
     	<div class="row">
             <div class="col-md-4"></div>
              <div class="col-md-4" align="center">
-                <form role="form" id="formPais">
+                <form role="form" id="formPais" method="POST">
                   <h2>Registro Pa&iacute;s</h2>
                   <div class="form-group">
                     <label for="nombre">Nombre</label>

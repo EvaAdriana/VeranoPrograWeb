@@ -7,6 +7,12 @@
       include ('../../controllers/PosicionController.php');
       include ('../../libs/Er.php');
        include ('../layouts/header.php');
+       if (isset($_POST['nombre'])){
+    
+    $posicionC=new PosicionController();
+    $posicionC->insertaPosicion($_POST);
+
+  }
 ?>
 	<br /><br />
 	<div class="container">
@@ -14,7 +20,7 @@
            <div class="col-md-4"></div>
              <div class="col-md-4" align="center">
                  <h2>Registro Posici&oacute;n</h2>
-                <form role="form" id="formPosicion">
+                <form role="form" id="formPosicion" method="POST">
                   <div class="form-group">
                     <label for="nombre">Nombre</label>
                     <input type="text" class="form-control" id="nombre" placeholder="ej: Portero" name="nombre">

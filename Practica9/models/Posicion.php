@@ -1,6 +1,6 @@
 <?php
 
-class Usuario extends Modelo{
+class Posicion extends Modelo{
     public $nombre_tabla = 'posision';
     public $pk = 'idposision';
     
@@ -59,7 +59,7 @@ class Usuario extends Modelo{
 
         $er = new Er();
         
-        if ( !$er->valida_abreviatura($valor) ){
+        if ( !$er->valida_nombre($valor) ){
             $this->errores[] = "Esta abreviatura (".$valor.") no es valida";
         }
 

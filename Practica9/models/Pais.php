@@ -1,21 +1,21 @@
 <?php
 
-class Usuario extends Modelo{
+class Pais extends Modelo{
     public $nombre_tabla = 'pais';
-    public $pk = 'idpais';
+    public $pk = 'id_pais';
     
     
     public $atributos = array(
         'nombre'=>array(),
-        'idcontinente'=>array(),
-		'bandera'=>array(),
+        'bandera'=>array(),
+        'id_continente'=>array(),
     );
     
     public $errores = array( );
     
     private $nombre;
-    private $idcontinente;
-	private $bandera;
+    private $bandera;
+    private $id_continente;
        
     
     function Pais(){
@@ -43,66 +43,41 @@ class Usuario extends Modelo{
             $this->errores[] = "Este nombre (".$valor.") no es valido";
         }
 
-        $rs = $this->consulta_sql("select * from pais where nombre = '$valor'");
-        $rows = $rs->GetArray();
-        
-        if(count($rows) > 0){
-            $this->errores[] = "Este nombre (".$valor.") ya esta registrado"; 
-        }else{
-            $this->nombre = trim($valor);
-        }
+        $this->nombre = trim($valor);
     }
 
-	public function get_bandera(){
+
+    public function get_bandera(){
         return $this->bandera;
-    }
+    } 
 
-	public function set_bandera($valor){
-
-		$er = new Er();
-        
-        if ( !$er->valida_imagen($valor) ){
-            $this->errores[] = "(".$valor.") no es imagen";
-        }
-
-        $rs = $this->consulta_sql("select * from pais where bandera = '$valor'");
-        $rows = $rs->GetArray();
-        
-        /*if(count($rows) > 0){
-            $this->errores[] = "Este bandera (".$valor.") ya esta registrado"; 
-        }else*/{
-            $this->bandera = trim($valor);
-        }
-    }
-
-	public function get_idpais(){
-        return $this->idpais;
-    }
-
-	public function set_idcontinente($valor){
+    public function set_bandera($valor){
 
         $er = new Er();
         
-        if ( !$er->valida_idcontinente($valor) ){
-            $this->errores[] = "Este continente (".$valor.") no es valido";
+        if ( !$er->valida_imagen($valor) ){
+            $this->errores[] = "Este bandera (".$valor.") no es valido";
         }
 
-        $rs = $this->consulta_sql("select * from pais where idcontinente = '$valor'");
-        $rows = $rs->GetArray();
-        
-        /*if(count($rows) > 0){
-            $this->errores[] = "Este continente (".$valor.") ya esta registrado"; 
-        }else*/{
-            $this->idcontinente = trim($valor);
-        }
+        $this->escudo = trim($valor);
     }
 
-    
+     public function get_id_continente(){
+        return $this->id_continente;
+    } 
+
+    public function set_id_continente($valor){
+
+        $er = new Er();
+        
+        if ( !$er->valida_entero($valor) ){
+            $this->errores[] = "Este valor (".$valor.") no es valido";
+        }
+
+        $this->id_continente = trim($valor);
+    }
 
 
-    
-    
-    
 }
 
 ?>

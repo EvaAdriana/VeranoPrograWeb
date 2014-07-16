@@ -9,18 +9,20 @@
       include ('../../libs/Er.php');
   include ('../layouts/header.php');
   if (isset($_POST['Nombre'])){
-        echo "<pre>";
-        print_r($_POST);
-        echo "</pre>";
-    }
-?>
+    
+    $estadioC=new EstadioController();
+    $estadioC->insertaEstadio($_POST);
+
+  }
+
+ ?>
 	<br /><br />
 	<div class="container">
     	<div class="row">
              <div class="col-md-4"></div>
              <div class="col-md-4" align="center">
                 <h2>Registro Estadio</h2>
-                <form role="form" id="formEstadio">
+                <form role="form" id="formEstadio" method="POST">
                   <div class="form-group">
                     <label for="Nombre">Nombre</label>
                     <input type="text" class="form-control" id="Nombre" placeholder="Nombre del estadio" name="Nombre">

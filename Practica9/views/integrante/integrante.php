@@ -8,15 +8,17 @@
       include ('../../controllers/IntegranteController.php');
       include ('../../libs/Er.php');
   include ('../layouts/header.php');
-  if (isset($_POST['nombre'])){
-        echo "<pre>";
-        print_r($_POST);
-        echo "</pre>";
-    }
-?>
+   if (isset($_POST['nombre'])){
+    
+    $integranteC=new IntegranteController();
+    $integranteC->insertaIntegrante($_POST);
+
+  }
+
+  ?>
 	<br /><br />
 	<div class="container">
-      <form role="form" id="formIntegrante">
+      <form role="form" id="formIntegrante" method="POST">
     	   <div class="row">
             <div class="col-md-4"></div>
              <div class="col-md-4" align="center">

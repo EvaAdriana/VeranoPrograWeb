@@ -7,7 +7,12 @@
       include ('../../controllers/ContinenteController.php');
       include ('../../libs/Er.php');
        include ('../layouts/header.php');
-  include ('../layouts/header.php');
+  if (isset($_POST['nombre'])){
+    
+    $continenteC=new ContinenteController();
+    $continenteC->insertaContinente($_POST);
+
+  }
 ?>
 	<br /><br />
 	<div class="container">
