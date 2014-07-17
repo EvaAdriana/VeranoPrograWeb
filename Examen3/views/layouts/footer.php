@@ -96,6 +96,12 @@
                     notEmpty: {
                         message: 'Este campo es requerido'
                     }
+                     file: {
+                            extension: 'jpeg,png,jpg',
+                            type: 'image/jpeg,image/png,image/jpg',
+                            maxSize: 2048 * 1024,   // 2 MB
+                            message: 'Archivo no valido'
+                        }
                 }
             },
             titulo: {

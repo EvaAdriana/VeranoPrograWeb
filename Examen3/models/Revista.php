@@ -18,6 +18,7 @@ class Revista extends Modelo{
         'clave'=>array(),
         'directorio'=>array(),
         'editorial'=>array(),
+        'id_status'=>array(),
     );
     
     public $errores = array( );
@@ -33,7 +34,9 @@ class Revista extends Modelo{
     private $clave;
     private $directorio;
     private $editorial;
+    private $id_status;
     
+   
     function Revista(){
         parent::Modelo();
     }
@@ -58,46 +61,52 @@ class Revista extends Modelo{
         if ( !$er->valida_nombre($valor) ){
             $this->errores[] = "Este nombre (".$valor.") no es valido";
         }
+
+        $rs = $this->consulta_sql("select * from revista where nombre = '$valor'");
+        $rows = $rs->GetArray();
+        
+        if(count($rows) > 0){
+            $this->errores[] = "Este nombre (".$valor.") ya esta registrado"; 
+        }else{
+            $this->nombre = $valor;
+        }
     }
 
- public function get_portada(){
+    public function get_portada(){
         return $this->portada;
     } 
 
     public function set_portada($valor){
 
-        $er = new Er();
+           $er = new Er();
         
-        if ( !$er->valida_nombre($valor) ){
-            $this->errores[] = "Este portada (".$valor.") no es valido";
+        if ( !$er->valida_imagen($valor['name']) ){
+            $this->errores[] = "Esta imagen (".$valor.") no es valida";
         }
+
+            $this->portada = $valor['name'];
+        
     }
 
-	public function get_fecha(){
+
+    public function get_fecha(){
         return $this->fecha;
-    }
+    } 
 
-	public function set_fecha($valor){
+    public function set_fecha($valor){
 
-        $er = new Er();
+            $this->fecha = $valor;
         
-        if ( !$er->valida_fecha($valor) ){
-            $this->errores[] = "Esta fecha (".$valor.") no es valida";
-        }
     }
 
-	public function get_volumen(){
+    public function get_volumen(){
         return $this->volumen;
-    }
+    } 
 
-	public function set_volumen($valor){
+    public function set_volumen($valor){
 
-		$er = new Er();
+            $this->volumen = $valor;
         
-        if ( !$er->valida_entero($valor) ){
-            $this->errores[] = "Este volumen (".$valor.") no es valido";
-        }
-
     }
 
     public function get_titulo(){
@@ -106,11 +115,8 @@ class Revista extends Modelo{
 
     public function set_titulo($valor){
 
-        $er = new Er();
+            $this->titulo = $valor;
         
-        if ( !$er->valida_nombre($valor) ){
-            $this->errores[] = "Este titulo (".$valor.") no es valido";
-        }
     }
 
     public function get_subtitulo(){
@@ -119,36 +125,57 @@ class Revista extends Modelo{
 
     public function set_subtitulo($valor){
 
-        $er = new Er();
+            $this->subtitulo = $valor;
         
-        if ( !$er->valida_nombre($valor) ){
-            $this->errores[] = "Este subtitulo (".$valor.") no es valido";
-        }
     }
 
-    public function get_id_club(){
+      public function get_id_club(){
         return $this->id_club;
     } 
 
     public function set_id_club($valor){
 
-        $er = new Er();
+            $this->id_club = $valor;
         
-        if ( !$er->valida_nombre($valor) ){
-            $this->errores[] = "Este id_club (".$valor.") no es valido";
-        }
     }
 
-   public function get_numero(){
+
+    public function get_numero(){
         return $this->numero;
-    } 
-
+    }
+    
     public function set_numero($valor){
-
         $er = new Er();
         
         if ( !$er->valida_entero($valor) ){
             $this->errores[] = "Este numero (".$valor.") no es valido";
+        }
+
+        $rs = $this->consulta_sql("select * from revista where numero = '$valor'");
+        $rows = $rs->GetArray();
+        
+        if(count($rows) > 0){
+            $this->errores[] = "Este numero (".$valor.") ya esta registrado"; 
+        }else{
+            $this->numero = trim($valor);
+        }
+    }
+
+    public function get_clave(){
+        return $this->clave;
+    } 
+
+    public function set_clave($valor){
+
+        $er = new Er();
+        
+        $rs = $this->consulta_sql("select * from revista where clave = '$valor'");
+        $rows = $rs->GetArray();
+        
+        if(count($rows) > 0){
+            $this->errores[] = "Este clave (".$valor.") ya esta registrada"; 
+        }else{
+            $this->clave = $valor;
         }
     }
 
@@ -158,11 +185,8 @@ class Revista extends Modelo{
 
     public function set_directorio($valor){
 
-        $er = new Er();
+            $this->directorio = $valor;
         
-        if ( !$er->valida_nombre($valor) ){
-            $this->errores[] = "Este directorio (".$valor.") no es valido";
-        }
     }
 
     public function get_editorial(){
@@ -171,18 +195,31 @@ class Revista extends Modelo{
 
     public function set_editorial($valor){
 
-        $er = new Er();
+            $this->editorial = $valor;
         
-        if ( !$er->valida_nombre($valor) ){
-            $this->errores[] = "Este editorial (".$valor.") no es valido";
-        }
+    }
+
+
+    
+    public function get_id_status(){
+        return $this->id_status;
     }
     
+    public function set_id_status($valor){
+        $er = new Er();
+        
+        if ( !$er->valida_entero($valor) ){
+            $this->errores[] = "Este id (".$valor.") no es valido";
+        }
 
-
-    
-    
-    
-}
-
+        $rs = $this->consulta_sql("select * from revista where id_status = '$valor'");
+        $rows = $rs->GetArray();
+        
+        if(count($rows) > 0){
+            $this->errores[] = "Este id (".$valor.") ya esta registrado"; 
+        }else{
+            $this->id_status = trim($valor);
+        }
+    }
+    }
 ?>

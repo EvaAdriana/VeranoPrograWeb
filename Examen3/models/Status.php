@@ -38,6 +38,8 @@ class Status extends Modelo{
         if ( !$er->valida_nombre($valor) ){
             $this->errores[] = "Este status (".$valor.") no es valido";
         }
+
+        $this->status = $valor;
     }
 
         

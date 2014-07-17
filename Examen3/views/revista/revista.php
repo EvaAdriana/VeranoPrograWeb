@@ -10,7 +10,7 @@
     if (isset($_POST['nombre'])){
     
     $revistaC=new RevistaController();
-    $revistaC->insertaRevista($_POST);
+    $revistaC->insertaRevista($_POST,$_FILES);
 
   }
 ?>
@@ -21,14 +21,14 @@
               <h2 align="center">Revista</h2>
               
               <!--Inicia form-->
-                <form action="" id="formRevista" method="POST" align="center">
+          <form action="" id="formRevista" method="POST" enctype="multipart/form-data" align="center">
                         <div class="form-group">
             <label for="nombre">Nombre</label>
             <input type="text" id="nombre" class="form-control" name="nombre" required>
           </div>
           <div class="form-group">
             <label for="portada">Portada</label>
-            <input type="text" id="portada" class="form-control" name="portada" required>
+            <input type="file" id="portada" class="form-control" name="portada" required>
            </div> 
           <div class="form-group">
              <label for="fecha">Fecha de publicacion</label>
@@ -70,6 +70,18 @@
             <label for="editorial">Editorial</label>
             <textarea type="text" id="editorial" class="form-control" name="editorial" ></textarea>
           </div> 
+           <div class="form-group">
+                    <label for="id_status">Id Status</label>
+                    <select id="id_status" name="id_status" class="form-control" required>
+                        <option value="" disabled selected>Seleccionar ID Status</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                      </select>
+                  </div>
+                 
           <div class="form-group">
             <input align="rigth" type="submit" clase="btn btn-default" value="Guardar">   
           </div> 
